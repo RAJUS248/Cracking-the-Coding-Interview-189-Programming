@@ -34,7 +34,7 @@ def Check_Permutation(string1,string2):
             return False
         
         seen[chr2] -= 1
-        
+
         if seen[chr2] < 0:
             return False
         
@@ -45,3 +45,18 @@ string1 = "aabc"
 string2 = "baaa"
 
 print(Check_Permutation(string1,string2))
+
+
+
+def Check_Permutation_v3(string1,string2):
+
+    if len(string1) != len(string2):
+        return False
+    
+    return sorted(string1) == sorted(string2)
+
+
+string1 = "aabcf"
+string2 = "baacd"
+
+print(Check_Permutation_v3(string1,string2))
